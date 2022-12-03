@@ -1,2 +1,3 @@
-# Ping-Pong
-the game
+Игра ping-pong
+
+
