@@ -6,6 +6,7 @@ W_H = 500
 window = display.set_mode((W_W, W_H))
 display.set_caption("Пинг-Понг")
 
+#Class
 class GameSprite(sprite.Sprite):
     def __init__(self, fn, x, y, w, h, speed):
         super().__init__()
@@ -21,8 +22,8 @@ class GameSprite(sprite.Sprite):
         window.blit(self.image, (self.rect.x, self.rect.y))
 
 
-
 ball = GameSprite("ball_prev_ui.png", 100, 100, 50, 50, 0)
+
 clock = time.Clock()
 
 game = True
