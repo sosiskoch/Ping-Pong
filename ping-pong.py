@@ -33,6 +33,6 @@ while game:
         if e.type == QUIT:
             game = False
 
-    window.fill((0,0,255))
+    window.fill((255,255,255))
     ball.update()
     display.update()
