@@ -23,9 +23,14 @@ class GameSprite(sprite.Sprite):
     def update(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
 
+class Player(GameSprite):
+    def update(self):
+        key_pressed = key.get_pressed()
+        if key_pressed[K_w] 
 
-ball = GameSprite("ball_prev_ui.png", 100, 100, 50, 50, 3, 3)
 
+ball = GameSprite("ball_prev_ui.png", 100, 100, 40, 40, 3, 3)
+stick1 = Player("stick_prev_ui.png", 647, 95, 80, 250, 3, 3)
 clock = time.Clock()
 
 game = True
@@ -42,11 +47,12 @@ while game:
         ball.speedy *= -1
     if ball.rect.x > W_W - 40 or ball.rect.x < 0:
         ball.speedx *= -1
-        t.sleep(1.5)
+        t.sleep(1)
         ball.rect.x = 350
         ball.rect.y = 250
         
 
     window.fill((255,255,255))
     ball.update()
+    stick1.update()
     display.update()
