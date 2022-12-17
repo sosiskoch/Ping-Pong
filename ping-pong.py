@@ -52,7 +52,7 @@ class Player(GameSprite):
                 self.rect.y += self.speed_y
         super().update()
 
-ball = Ball(50, 50, 30, 30, 3, 'ball_prev_ui.png')
+ball = Ball(50, 50, 30, 30, 4, 'ball_prev_ui.png')
 player1 = Player(0, 200, 20, 100, 5, 'bob.png', K_w, K_s)
 player2 = Player(678, 200, 20, 100, 5, 'bob.png', K_UP, K_DOWN)
 
